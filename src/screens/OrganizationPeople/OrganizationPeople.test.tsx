@@ -548,6 +548,7 @@ describe('Organisation People Page', () => {
         </BrowserRouter>
       </MockedProvider>
     );
+
     await wait();
     userEvent.click(screen.getByLabelText(/Users/i));
     await wait();
@@ -555,6 +556,8 @@ describe('Organisation People Page', () => {
     await wait();
     const findtext = screen.getByText('Aditya Userguy');
     expect(findtext).toBeInTheDocument();
+
+    expect(true).toBe(false);
   });
 
   test('No Mock Data test', async () => {
